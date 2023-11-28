@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tic_tac_toe/screens/welcomepage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -203,6 +204,14 @@ class _HomePageState extends State<HomePage> {
                     _clearBoard();
                     Navigator.pop(context);
                   },
+              ),
+              TextButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const WelcomePage()));
+                  },
+                  child: Text('Quit Game!',style: TextStyle(
+                      color: Colors.pink.shade900
+                  ))
               )
             ],
           );
@@ -223,7 +232,17 @@ class _HomePageState extends State<HomePage> {
                     _clearBoard();
                     Navigator.pop(context);
                   },
-                  child: const Text('Play Again!')
+                  child: Text('Play Again!',style: TextStyle(
+                      color: Colors.pink.shade900
+                  ))
+              ),
+              TextButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const WelcomePage()));
+                  },
+                  child: Text('Quit Game!',style: TextStyle(
+                      color: Colors.pink.shade900
+                  ))
               )
             ],
           );
